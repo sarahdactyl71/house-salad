@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-# RSpec.describe "a user searches for colorado" do
   describe PropublicaService do
     attr_reader :service
 
@@ -20,7 +19,6 @@ require 'rails_helper'
     expect(house_members.count).to eq(7)
 
   end
-# end
 
 # As a user
 # When I visit "/"

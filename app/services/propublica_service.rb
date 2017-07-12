@@ -1,4 +1,4 @@
-class PropublicService
+class PropublicaService
   attr_reader :connection
 
   def initialize
