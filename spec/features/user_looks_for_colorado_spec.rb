@@ -8,16 +8,17 @@ require 'rails_helper'
     end
   end
 
-  it "sees 7 house members listed by seniority" do
-    house_members = @service.house_members(state: "CO")
-    house_member = house_members.first
+  describe '#house_members' do
+    it "sees 7 house members listed by seniority" do
+      house_members = @service.house_members(state: "CO")
+      house_member = house_members.first
 
-    visit root_path
-    select "Colorado", :from => "state"
-    click_on "Locate Members from House"
+      visit root_path
+      select "Colorado", :from => "state"
+      click_on "Locate Members from House"
 
-    expect(house_members.count).to eq(7)
-
+      expect(house_members.count).to eq(7)
+    end
   end
 
 # As a user
