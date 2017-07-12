@@ -6,6 +6,11 @@ class PropublicService
   end
 
   def house_members(info)
-    binding.pry
+    parse(connection.get('house_members', info))[:results]
   end
+
+  private
+    def parse(response)
+      JSON.parse(response.body, symbolize_names: true)
+    end
 end
