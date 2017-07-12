@@ -1,10 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe "a user searches for colorado" do
-  attr_reader :service
+# RSpec.describe "a user searches for colorado" do
+  describe PropublicaService do
+    attr_reader :service
 
-  before(:each) do
-    @service = Propublica.new
+    before(:each) do
+      @service = Propublica.new
+    end
   end
 
   it "sees 7 house members listed by seniority" do
@@ -18,7 +20,7 @@ RSpec.describe "a user searches for colorado" do
     expect(house_members.count).to eq(7)
 
   end
-end
+# end
 
 # As a user
 # When I visit "/"

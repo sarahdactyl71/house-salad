@@ -16,11 +16,13 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'pry'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'pry'
 end
 
 group :development do
