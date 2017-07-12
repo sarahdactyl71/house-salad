@@ -4,16 +4,19 @@ RSpec.describe "a user searches for colorado" do
   attr_reader :service
 
   before(:each) do
-    @service = ProPublica.new
+    @service = Propublica.new
   end
 
   it "sees 7 house members listed by seniority" do
     house_members = @service.house_members(state: "CO")
     house_member = house_members.first
+
     visit root_path
     select "Colorado", :from => "state"
     click_on "Locate Members from House"
-    expect(current_path).to eq(search_path)
+
+    expect(house_members.count).to eq(7)
+
   end
 end
 
