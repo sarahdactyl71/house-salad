@@ -1,0 +1,3 @@
+class PropublicService
+
+end
