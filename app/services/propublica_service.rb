@@ -2,7 +2,7 @@ class PropublicaService
   attr_reader :connection
 
   def initialize
-    @connection = Faraday.new('https://api.propublica.org/congress/v1/')
+    @connection = Faraday.new('https://api.propublica.org/congress/v1/members/house/CO/current.json')
   end
   # List of members: GET https://api.propublica.org/congress/v1/{congress}/{chamber}/members.json
   # Specific member: GET https://api.propublica.org/congress/v1/members/{member-id}.json
